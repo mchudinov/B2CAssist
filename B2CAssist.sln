@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B2CAssist", "B2CAssist\B2CAssist.csproj", "{DF7A3EAC-3E48-4FA8-8FE6-BCB8E6BACCD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{DF7A3EAC-3E48-4FA8-8FE6-BCB8E6BACCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{F7460671-63B5-43FD-B017-67B776DAB896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases", "UseCases\UseCases.csproj", "{FF9B2277-1F92-426F-AD08-406199BCA4B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DF7A3EAC-3E48-4FA8-8FE6-BCB8E6BACCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF7A3EAC-3E48-4FA8-8FE6-BCB8E6BACCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF7A3EAC-3E48-4FA8-8FE6-BCB8E6BACCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7460671-63B5-43FD-B017-67B776DAB896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7460671-63B5-43FD-B017-67B776DAB896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7460671-63B5-43FD-B017-67B776DAB896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7460671-63B5-43FD-B017-67B776DAB896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9B2277-1F92-426F-AD08-406199BCA4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9B2277-1F92-426F-AD08-406199BCA4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9B2277-1F92-426F-AD08-406199BCA4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9B2277-1F92-426F-AD08-406199BCA4B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
