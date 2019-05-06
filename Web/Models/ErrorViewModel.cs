@@ -1,5 +1,3 @@
-using System;
-
 namespace B2CAssist.Models
 {
     public class ErrorViewModel
