@@ -6,7 +6,7 @@ namespace Models
     {
         public string StorageKeyId { get; set; }
 
-        public int ExpirationTimeStamp { get; set; }
+        public long ExpirationTimeStamp { get; set; }
 
         public DateTimeOffset ExpirationDateTimeOffset { get; set; }
 
