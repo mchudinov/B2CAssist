@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataProviders
 {
-    public interface IAzureB2CProvider
+    public interface IDataProvider
     {
         List<PolicyKey> GetPolicyKeys();
     }

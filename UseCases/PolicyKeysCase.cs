@@ -1,17 +1,16 @@
 ﻿using DataProviders;
 using Models;
-using System;
 using System.Collections.Generic;
 
 namespace UseCases
 {
     public class PolicyKeysCase : IPolicyKeysCase
     {
-        protected IAzureB2CProvider _provider;
+        protected IDataProvider _provider;
 
-        public PolicyKeysCase(IAzureB2CProvider provider)
+        public PolicyKeysCase(IDataProvider provider)
         {
-            IAzureB2CProvider _porvider = provider;
+            IDataProvider _porvider = provider;
         }
 
         public List<PolicyKey> GetPolicyKeys()

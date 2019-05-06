@@ -3,7 +3,7 @@ using Models;
 
 namespace DataProviders
 {
-    public class AzureB2CProvider : IAzureB2CProvider
+    public class AzureB2CProvider : IDataProvider
     {
         public List<PolicyKey> GetPolicyKeys()
         {
