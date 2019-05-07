@@ -17,6 +17,7 @@ namespace B2CAssist.Controllers
             this._case = _case;
         }
 
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Index()
         {
             List<PolicyKey> keys = _case.GetPolicyKeys();
