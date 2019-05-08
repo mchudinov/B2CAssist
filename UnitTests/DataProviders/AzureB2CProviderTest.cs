@@ -18,6 +18,8 @@ namespace UnitTests
         public void TestGetPolicyKeys()
         {
             var provider = new AzureB2CProvider(credentials);
+            var temp = provider.GetPolicyKeys();
+            Assert.True(temp.Count > 0);
         }
     }
 }
