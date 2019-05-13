@@ -2,6 +2,7 @@
 using DataProviders;
 using Models;
 using System.Collections.Generic;
+using System;
 
 namespace UseCases
 {
@@ -16,7 +17,13 @@ namespace UseCases
 
         public List<PolicyKey> GetPolicyKeys()
         {
-            return _provider.GetPolicyKeys();
+            var keys = _provider.GetPolicyKeys();
+            foreach (var key in keys)
+            {
+                key.ExpirationDateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(key.ExpirationTimestamp);
+                key.ExpirationSeconds = (long)(key.ExpirationDateTimeOffset - key.CreatedDateTimeOffset).TotalSeconds;
+            }
+            return keys;
         }
     }
 }

@@ -18,9 +18,9 @@ namespace DataProviders
             {                
                 keys.Add(new PolicyKey
                 {
-                    StorageKeyId = "B2C_1A_" + GetRandomString(10),
+                    Name = "B2C_1A_" + GetRandomString(10),
                     CreatedDateTimeOffset = GetRandomCreatedDate(),
-                    ExpirationTimeStamp = GetRandomExpirationDate().ToUnixTimeSeconds()
+                    ExpirationTimestamp = GetRandomExpirationDate().ToUnixTimeSeconds()
                 });
             }            
 
@@ -36,7 +36,7 @@ namespace DataProviders
 
         private static DateTimeOffset GetRandomCreatedDate()
         {
-            DateTime minDt = new DateTime(2015, 1, 1, 10, 0, 0);
+            DateTime minDt = new DateTime(2018, 1, 1, 10, 0, 0);
             DateTime maxDt = new DateTime(2019, 1, 1, 17, 0, 0);
             return GetRandomDate(minDt, maxDt);
         }
@@ -44,13 +44,13 @@ namespace DataProviders
         private static DateTimeOffset GetRandomExpirationDate()
         {
             DateTime minDt = new DateTime(2020, 1, 1, 10, 0, 0);
-            DateTime maxDt = new DateTime(2025, 1, 1, 17, 0, 0);
+            DateTime maxDt = new DateTime(2021, 1, 1, 17, 0, 0);
             return GetRandomDate(minDt, maxDt);
         }
 
         public static string GetRandomString(int length)
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghigklmnopqrstuvwxyz";
             return new string(Enumerable.Repeat(chars, length).Select(s => s[_random.Next(s.Length)]).ToArray());
         }
     }

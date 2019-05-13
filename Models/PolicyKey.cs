@@ -4,9 +4,11 @@ namespace Models
 {
     public class PolicyKey
     {
-        public string StorageKeyId { get; set; }
+        public string Name { get; set; }
 
-        public long ExpirationTimeStamp { get; set; }
+        public long ExpirationTimestamp { get; set; }
+
+        public long ExpirationSeconds { get; set; }
 
         public DateTimeOffset ExpirationDateTimeOffset { get; set; }
 

@@ -1,8 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model  Web.Models.IndexViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <table class="table">
+        <tr>
+            <th>
+                Storage Key ID
+            </th>
+            <th>
+                ExpirationDateTimeOffset
+            </th>
+            <th>
+                CreatedDateTimeOffset
+            </th>
+            <th>
+                Expires in
+            </th>
+        </tr>
+
+        @foreach (var item in Model.PolicyKeys)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDateTimeOffset)
+                </td>
+                <td>
+                    @item.ExpirationDateTimeOffset
+                </td>                
+                <td>
+                    @{
+                        var t = TimeSpan.FromSeconds(item.ExpirationSeconds);
+                        @string.Format("{0:D2}days {1:D2}hours {2:D2}min {3:D3}sec", t.Days, t.Hours, t.Minutes, t.Seconds);
+                    }                    
+                </td>
+            </tr>
+        }
+    </table>
