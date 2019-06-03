@@ -54,19 +54,19 @@ namespace B2CAssist
                     options.SaveToken = true;
                     options.Authority = "https://login.microsoftonline.com/common/";
 
-                    options.TokenValidationParameters =
-                    new TokenValidationParameters
-                    {
-                        LifetimeValidator = (before, expires, token, parameters) => expires > DateTime.UtcNow,
-                        ValidateAudience = true,
-                        ValidAudiences = new string[] { clientId },
-                        ValidateIssuer = true,
-                        ValidIssuer = issuer,
-                        ValidateActor = false,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("{myClientSecret}"))
-                    };
+                    //options.TokenValidationParameters =
+                    //    new TokenValidationParameters
+                    //    {
+                    //        LifetimeValidator = (before, expires, token, parameters) => expires > DateTime.UtcNow,
+                    //        ValidateAudience = true,
+                    //        ValidAudiences = new string[] { clientId },
+                    //        ValidateIssuer = true,
+                    //        ValidIssuer = issuer,
+                    //        ValidateActor = false,
+                    //        ValidateLifetime = true,
+                    //        ValidateIssuerSigningKey = true,
+                    //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("{myClientSecret}"))
+                    //    };
 
                     options.Events = new JwtBearerEvents
                     {
